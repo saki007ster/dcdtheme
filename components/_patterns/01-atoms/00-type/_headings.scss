@@ -1,0 +1,79 @@
+%heading-link {
+  a {
+    $underline-color: $color-secondary;
+
+    display: inline;
+    background-color: transparent;
+    background-image: linear-gradient(to right, $underline-color 0%, $underline-color 100%);
+    background-repeat: repeat-x;
+    background-position: bottom center; // Default for old safari
+    background-position: bottom 0.12em center; //sass-lint:disable-line no-duplicate-properties
+    background-size: 100% 1px;
+    color: $color-primary-dark;
+    text-shadow: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: transparent;
+      background-size: 100% 2px;
+      color: $color-secondary-dark;
+    }
+  }
+}
+
+%heading-core {
+  @extend %heading-link;
+
+  color: $color-primary-dark;
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+
+  &[data-align='left'] {
+    text-align: left;
+  }
+
+  &[data-align='center'] {
+    text-align: center;
+  }
+
+  &[data-theme='italics'] {
+    font-style: italic;
+  }
+}
+
+.a-heading__h1,
+%a-heading__h1 {
+  @extend %heading-core;
+  @include font-size($h1-font-sizes);
+}
+
+.a-heading__h2,
+%a-heading__h2 {
+  @extend %heading-core;
+  @include font-size($h2-font-sizes);
+}
+
+.a-heading__h3,
+%a-heading__h3 {
+  @extend %heading-core;
+  @include font-size($h3-font-sizes);
+}
+
+.a-heading__h4,
+%a-heading__h4 {
+  @extend %heading-core;
+  @include font-size($h4-font-sizes);
+}
+
+.a-heading__h5,
+%a-heading__h5 {
+  @extend %heading-core;
+  @include font-size($h5-font-sizes);
+}
+
+.a-heading__h6,
+%a-heading__h6 {
+  @extend %heading-core;
+  @include font-size($h6-font-sizes);
+}

@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "name": "$white",
+      "value": "white"
+    },
+    {
+      "name": "$black",
+      "value": "black"
+    },
+    {
+      "name": "$shadow",
+      "value": "rgba(0, 0, 0, 0.5)"
+    },
+    {
+      "name": "$grey-xdark",
+      "value": "#333333"
+    },
+    {
+      "name": "$grey-dark",
+      "value": "#4c4c4c"
+    },
+    {
+      "name": "$grey",
+      "value": "#666666"
+    },
+    {
+      "name": "$grey-light",
+      "value": "#999999"
+    },
+    {
+      "name": "$grey-xlight",
+      "value": "#cccccc"
+    },
+    {
+      "name": "$grey-xxlight",
+      "value": "#e5e5e5"
+    },
+    {
+      "name": "$grey-xxxlight",
+      "value": "#f2f2f2"
+    },
+    {
+      "name": "$blue",
+      "value": "#3f3fb1"
+    },
+    {
+      "name": "$blue-xdark",
+      "value": "#232361"
+    },
+    {
+      "name": "$blue-dark",
+      "value": "#292971"
+    },
+    {
+      "name": "$blue-light",
+      "value": "#7373c6"
+    },
+    {
+      "name": "$blue-xlight",
+      "value": "#b9b9e2"
+    },
+    {
+      "name": "$red",
+      "value": "#a00000"
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$</code> in <code>./components/_patterns/00-base/03-colors/_00-colors__vars.scss</code>"
+  }
+}

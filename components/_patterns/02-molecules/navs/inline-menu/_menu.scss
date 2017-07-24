@@ -1,0 +1,24 @@
+.menu {
+  // @include list-reset;
+}
+
+.menu__item {
+  margin: 0 1em 0.5em 0;
+
+  // @include medium {
+  //   display: inline;
+  //   margin-bottom: 1em;
+  // }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.menu__link {
+  // @include font-size(.75);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}

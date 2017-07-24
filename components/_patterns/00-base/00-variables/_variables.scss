@@ -1,0 +1,31 @@
+//////////////////////////
+
+/// Base font size (REM)
+$base-font-size: 16px;
+
+/// Base line height
+$base-line-height: 24px;
+
+/// Base Font Family
+$base-font-family: 'Source Code Pro', 'Arial', sans-serif;
+
+/// Title Font Family
+/// @group type
+$title-font-family: 'Roboto Slab', 'Arial', sans-serif;
+
+/// Title Font Weight
+/// @group type
+$title-font-weight: 100;
+
+
+// Fonts
+// $body: Georgia, Times, 'Times New Roman', serif;
+// $heading: 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
+
+
+/// Widths and base sizing
+$max-width: 1200px;
+$base-font-size: 62.5%; // setup to work with rems
+$base-font-size: 16px; // setup to work with rems
+// $base-border-size: 5px;
+$measure-max: 675px; // use for paragraph measure.

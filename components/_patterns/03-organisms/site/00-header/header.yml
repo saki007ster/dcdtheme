@@ -1,0 +1,8 @@
+logo:
+  join():
+     - include():
+        pattern: molecules-logo
+menu_main:
+  join():
+    - include():
+        pattern: molecules-menu-main

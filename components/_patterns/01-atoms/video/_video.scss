@@ -1,0 +1,27 @@
+%a-video__core {
+  position: relative;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Default 16x9 video
+.a-video {
+  @extend %a-video__core;
+  padding-bottom: 9/16 * 100%;
+}
+
+
+// 4x3 video
+.a-video--4x3 {
+  @extend %a-video__core;
+  padding-bottom: 3/4 * 100%;
+}

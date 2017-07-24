@@ -1,0 +1,68 @@
+%m-card,
+.m-card {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: $white;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include respond-to('full-nav') {
+    &.left {
+      .m-card {
+        &__banner {
+          margin-right: 5%;
+          width: 45%;
+        }
+
+        &__info {
+          margin-left: 5%;
+          width: 45%;
+        }
+      }
+
+    }
+
+    &.right {
+      flex-direction: row-reverse;
+
+      .m-card {
+        &__banner {
+          margin-left: 5%;
+          width: 45%;
+        }
+
+        &__info {
+          margin-right: 5%;
+          width: 45%;
+        }
+      }
+    }
+  }
+
+}
+
+%m-card__banner,
+.m-card__banner {
+  min-height: ru(8);
+}
+
+.m-card__info {
+  margin-top: auto;
+  padding-top: ru(0.5);
+  padding-right: ru(0.5);
+  padding-bottom: ru(1);
+  padding-left: ru(0.5);
+  height: ru(13.5);
+  overflow: hidden;
+}
+
+.m-card__title {
+  clear: both;
+  margin-bottom: ru(0.5);
+}

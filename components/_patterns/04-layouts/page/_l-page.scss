@@ -1,0 +1,19 @@
+.l-page__utilities {
+  margin: 0 auto;
+  max-width: $bp-max;
+  overflow: hidden;
+}
+
+.l-page__utilities-messages {
+  > div {
+    margin-top: ru(0.5);
+    margin-bottom: ru(0.25);
+  }
+}
+
+.l-page__utilities-tabs {
+  > div {
+    margin-top: ru(0.5);
+    margin-bottom: ru(0.25);
+  }
+}

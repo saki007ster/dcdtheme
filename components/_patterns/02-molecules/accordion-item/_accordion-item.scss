@@ -1,0 +1,74 @@
+.m-accordion-item {
+  border-bottom: 1px solid $white;
+}
+
+.m-accordion-item__label {
+  @extend %u-clearfix;
+  display: block;
+  position: relative;
+  outline: none;
+  background-color: $color-primary-xxlight;
+  cursor: pointer;
+  padding: ru(0.75) ru(3) ru(0.75) ru(0.75);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-primary-dark;
+  font-family: $title-font-family;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: $color-primary;
+    background-color: $color-primary-light
+  }
+}
+
+.m-accordion-item__label-icon {
+  @include svg-centered (ru(1), ru(1), ru(1.5), ru(1.5));
+  // Vertical center w/ Transform y
+  position: absolute;
+  top: 50%;
+  right: ru(0.25);
+  transform: translateY(-50%);
+  stroke: $color-primary-dark;
+  fill: none;
+}
+
+.m-accordion-item__svg--expand {
+  display: none;
+
+  .m-accordion-item[data-accordion-state='is-closed'] &,
+  // STOP FOUC - js is running and it is not open - Show Icon
+  .js .m-accordion-item:not([data-accordion-state='is-open']) &,
+  .no-js & {
+    display: block;
+  }
+}
+
+.m-accordion-item__svg--collapse {
+  display: none;
+
+  .m-accordion-item[data-accordion-state='is-open'] & {
+    display: block;
+  }
+}
+
+.m-accordion-item__label-text {
+  // pad top of text box to compensate for optical padding
+  // Caused by using all caps DIN
+  padding-top: ru(0.125);
+}
+
+.m-accordion-item__content {
+  @extend %u-remove-child--margin-top-bottom;
+  position: relative;
+  background-color: $color-primary-dark;
+  padding: ru(0.75);
+  color: $white;
+
+  .m-accordion-item[data-accordion-state='is-closed'] &,
+  // STOP FOUC - js is running and it is not open (doesn't need close state)
+  .js .m-accordion-item:not([data-accordion-state='is-open']) & {
+    display: none;
+  }
+}

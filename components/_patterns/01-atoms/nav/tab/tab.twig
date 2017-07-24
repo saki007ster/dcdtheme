@@ -1,0 +1,10 @@
+<li class="m-tab__item"{{attributes}}>
+  {% include "@atoms/button/button.twig"
+    with {
+      url: tab_link,
+      text: tab_text,
+      variation: '--thin',
+      extra_classes: tab_classes
+    }
+  %}
+</li>

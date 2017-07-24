@@ -1,0 +1,23 @@
+.m-logo {
+  max-width: ru(20); // @todo in o-header set layout
+}
+
+.m-logo__svg-wrapper {
+  @include svg-wrapper(1300 / 320); // Logo is 130x32px
+}
+
+.m-logo__svg {
+  @extend %svg__core;
+}
+
+.m-logo__hidden-text {
+  @extend %u-text-hide;
+  height: 0;
+}
+
+.m-logo {
+  img {
+    width: ru(3);
+    height: ru(3.5);
+  }
+}

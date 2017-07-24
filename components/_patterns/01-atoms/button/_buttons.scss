@@ -1,0 +1,99 @@
+// Core Extendables
+%a-btn--core {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+%a-btn--rounded {
+  border-radius: rem(30px);
+}
+
+%a-btn--default-padding {
+  padding: ru(0.5) ru(1);
+}
+
+%a-btn--narrow-padding {
+  padding: ru(0.25) ru(0.75);
+}
+
+%a-btn--palette-grey {
+  border-color: $color-primary-light;
+  background-color: $white;
+  color: $color-primary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-primary;
+    background-color: $color-primary-xxlight;
+    color: $color-primary-dark;
+  }
+}
+
+%a-btn--palette-blue {
+  border-color: $color-secondary-dark;
+  background-color: $color-secondary;
+  color: $white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-secondary-dark;
+    background-color: $color-secondary-dark;
+    color: $color-primary-xxxlight;
+  }
+}
+
+%a-btn--palette-black {
+  border-color: $color-primary-dark;
+  background-color: $color-primary;
+  color: $white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-primary-dark;
+    background-color: $color-primary-dark;
+    color: $color-primary-xxxlight;
+  }
+}
+
+%a-btn--palette-white {
+  background-color: $white;
+  color: $color-secondary;
+}
+
+// Button Variations
+%a-btn,
+.a-btn {
+  @extend %a-btn--core;
+  @extend %a-btn--default-padding;
+  @extend %a-btn--palette-blue;
+
+}
+
+.a-btn--secondary {
+  @extend %a-btn--core;
+  @extend %a-btn--rounded;
+  @extend %a-btn--default-padding;
+  @extend %a-btn--palette-grey;
+}
+
+.a-btn--thin {
+  @extend %a-btn--core;
+  @extend %a-btn--narrow-padding;
+  @extend %a-btn--palette-blue;
+}
+
+.a-btn--secondary-thin {
+  @extend %a-btn--core;
+  @extend %a-btn--narrow-padding;
+  @extend %a-btn--palette-grey;
+}

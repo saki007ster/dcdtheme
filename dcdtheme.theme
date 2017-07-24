@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Pattern Lab theme.
+ */
+
+/**
+ * Implements template_preprocess().
+ */
+function dcdtheme_preprocess(&$variables, $hook) {
+  // Add base_path variable to all template files.
+  $variables['base_path'] = base_path();
+}

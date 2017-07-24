@@ -1,0 +1,32 @@
+%l-grid,
+.l-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .l-grid__item {
+    margin-bottom: ru(1);
+
+    @include respond-to('type-large') {
+      padding: 0 ru(0.5);
+
+      &:nth-child(2n+1) {
+        padding-left: 0;
+      }
+
+      &:nth-child(2n+2) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.l-grid--2col {
+  @extend %l-grid;
+
+  .l-grid__item {
+    @include respond-to('type-large') {
+      width: 50%;
+    }
+  }
+}
+
